@@ -8,9 +8,7 @@ function immutableMerge(orig, added, removed) {
   }
 
   const filteredList = newList.filter((item) => !removed.includes(item));
-  return filteredList
-    .sort((a, b) => b.length - a.length)
-    .sort((a, b) => b.localeCompare(a));
+  return filteredList.sort((a, b) => b.localeCompare(a));
 }
 
 console.log(
